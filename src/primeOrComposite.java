@@ -28,8 +28,6 @@ public class primeOrComposite {
      * @return The boolean answer.
      */
     public static boolean isPrime(int number) {
-        int[] arr = new int[number];
-
         for (int i = 2; i < number; i++) {
             if (number % i == 0) {
                 return false;
