@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class findFactorial {
+public class Problem4 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -15,13 +15,11 @@ public class findFactorial {
         double duration = (endTime - startTime) / 1_000_000; // Convert nanoseconds to milliseconds
         System.out.println("Factorial of  " + number + " is " + result);
         System.out.println("Time taken: " + duration + " milliseconds");
-
-        sc.close();
     }
 
     /**
      * This method finds the factorial of the given number.
-     * Time complexity: O(n), since it iterates through all elements once.
+     * Time complexity: O(n), since it calls itself once a call.
      *
      * @param number The input number.
      * @return The factorial of the number.

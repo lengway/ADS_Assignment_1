@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class primeOrComposite {
+public class Problem5 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -9,30 +9,25 @@ public class primeOrComposite {
         sc.close();
 
         double startTime = System.nanoTime();
-        boolean result = isPrime(number);
+        int result = fibonacci(number);
         double endTime = System.nanoTime();
 
         double duration = (endTime - startTime) / 1_000_000; // Convert nanoseconds to milliseconds
-        String res = (result ? "Prime " : "Not Prime ");
-        System.out.println("Number " + number + " is " + res);
+        System.out.println("The Fibonacci number is: " + result);
         System.out.println("Time taken: " + duration + " milliseconds");
-
-        sc.close();
     }
 
     /**
-     * This method finds is given number prime.
-     * Time complexity: O(n), since it iterates through all elements once.
+     * This method finds the nth fibonacci number.
+     * Time complexity: O(n^2), since it calls function twice with every single call.
      *
      * @param number The input number.
-     * @return The boolean answer.
+     * @return The nth fibonacci number.
      */
-    public static boolean isPrime(int number) {
-        for (int i = 2; i < number; i++) {
-            if (number % i == 0) {
-                return false;
-            }
+    public static int fibonacci(int number) {
+        if (number < 2) {
+            return number;
         }
-        return true;
+        return fibonacci(number - 1) + fibonacci(number - 2);
     }
 }
