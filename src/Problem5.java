@@ -18,7 +18,7 @@ public class Problem5 {
     }
 
     /**
-     * This method finds the nth fibonacci number.
+     * This method finds the nth fibonacci number using recursion.
      * Time complexity: O(n^2), since it calls function twice with every single call.
      *
      * @param number The input number.
