@@ -18,6 +18,14 @@ public class Problem10 {
         System.out.println("Time taken: " + duration + " milliseconds");
     }
 
+    /**
+     * This method finds a GCD of two entered numbers using recursion.
+     * Time complexity: O(n), since it calls function once with every single call.
+     *
+     * @param a The first number.
+     * @param b The second number.
+     * @return The GCD of this two numbers.
+     */
     static int findGCD(int a, int b) {
         if (a == 0)
             return b;
