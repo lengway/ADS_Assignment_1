@@ -7,6 +7,9 @@ public class Problem7 {
         System.out.println("Enter the number of integers:");
         int n = sc.nextInt();
 
+        if (n < 0) {
+            throw new IllegalArgumentException("Number must be a positive integer");
+        }
         double startTime = System.nanoTime();
         System.out.println("Enter the integers:");
         reverseInput(n, sc);

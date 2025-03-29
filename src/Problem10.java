@@ -21,7 +21,8 @@ public class Problem10 {
     /**
      * This method finds a GCD of two entered numbers using Euclidean algorithm.
      * This is recursive function.
-     * Time complexity: O(n), since it calls function once with every single call.
+     * Time complexity: O(log n), since every divide make the number smaller in average
+     * in 2 times.
      *
      * @param a The first number.
      * @param b The second number.
@@ -30,6 +31,7 @@ public class Problem10 {
     static int findGCD(int a, int b) {
         if (a == 0)
             return b;
+
         return findGCD(b % a, a);
     }
 }

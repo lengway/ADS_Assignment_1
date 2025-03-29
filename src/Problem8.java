@@ -20,7 +20,7 @@ public class Problem8 {
 
     /**
      * This method checks string on containing symbols which are not digits.
-     * It uses function "String.matches()" and an expression "\\d" which means any number.
+     * It uses function "String.matches()" and an expression "\\d" which means digit 0-9.
      * "+" after it means check one or more time.
      * Time complexity: O(n), because it checks every char once.
      *

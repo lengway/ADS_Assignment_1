@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import static java.lang.Math.sqrt;
+
 public class Problem3 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -16,13 +18,11 @@ public class Problem3 {
         String res = (result ? "Prime " : "Not Prime ");
         System.out.println("Number " + number + " is " + res);
         System.out.println("Time taken: " + duration + " milliseconds");
-
-        sc.close();
     }
 
     /**
      * This method finds is given number prime.
-     * Time complexity: O(n), since it iterates through all elements once.
+     * Time complexity: O(√n), since it iterates through all elements before √n once.
      * It finds the first divider of the given number.
      * If divider found, function return false, else it returns true.
      *
@@ -30,7 +30,11 @@ public class Problem3 {
      * @return The boolean answer.
      */
     public static boolean isPrime(int number) {
-        for (int i = 2; i < number; i++) {
+        if  (number <= 1) {
+            return false;
+        }
+
+        for (int i = 2; i < sqrt(number); i++) {
             if (number % i == 0) {
                 return false;
             }

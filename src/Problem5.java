@@ -9,7 +9,7 @@ public class Problem5 {
         sc.close();
 
         double startTime = System.nanoTime();
-        int result = fibonacci(number);
+        long result = fibonacci(number);
         double endTime = System.nanoTime();
 
         double duration = (endTime - startTime) / 1_000_000; // Convert nanoseconds to milliseconds
@@ -25,7 +25,7 @@ public class Problem5 {
      * @param number The input number.
      * @return The nth fibonacci number.
      */
-    public static int fibonacci(int number) {
+    public static long fibonacci(int number) {
         if (number < 2) {
             return number;
         }

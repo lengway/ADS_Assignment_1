@@ -6,16 +6,16 @@ public class Problem2 {
 
         System.out.println("Enter the size of the array: ");
         int size = sc.nextInt();
-        sc.close();
 
         System.out.println("Enter the elements of the array: ");
         int[] arr = new int[size];
         for (int i = 0; i < size; i++) {
             arr[i] = sc.nextInt();
         }
+        sc.close();
 
         double startTime = System.nanoTime();
-        int avg = findAvg(arr);
+        double avg = findAvg(arr);
         double endTime = System.nanoTime();
 
         double duration = (endTime - startTime) / 1_000_000; // Convert nanoseconds to milliseconds
@@ -31,12 +31,16 @@ public class Problem2 {
      * @param arr The input array.
      * @return The average value in the array.
      */
-    public static int findAvg(int[] arr) {
+    public static double findAvg(int[] arr) {
         int sum = 0;
+        if (arr.length == 0) {
+            return 0;
+        }
+
         for (int j : arr) {
             sum += j;
         }
 
-        return  sum / arr.length;
+        return (double) sum / arr.length;
     }
 }

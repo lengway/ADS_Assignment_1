@@ -1,3 +1,4 @@
+import java.math.BigInteger;
 import java.util.Scanner;
 
 public class Problem4 {
@@ -8,8 +9,11 @@ public class Problem4 {
         int number = sc.nextInt();
         sc.close();
 
+        if (number < 0) {
+            throw new IllegalArgumentException("Number must be a positive integer");
+        }
         double startTime = System.nanoTime();
-        int result = factorial(number);
+        long result = factorial(number);
         double endTime = System.nanoTime();
 
         double duration = (endTime - startTime) / 1_000_000; // Convert nanoseconds to milliseconds
@@ -25,7 +29,7 @@ public class Problem4 {
      * @param number The input number.
      * @return The factorial of the number.
      */
-    public static int factorial(int number) {
+    public static long factorial(int number) {
         if (number == 1 || number == 0) {
             return 1;
         }

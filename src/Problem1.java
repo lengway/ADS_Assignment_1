@@ -6,13 +6,13 @@ public class Problem1 {
 
         System.out.println("Enter the size of the array: ");
         int size = sc.nextInt();
-        sc.close();
 
         System.out.println("Enter the elements of the array: ");
         int[] arr = new int[size];
         for (int i = 0; i < size; i++) {
             arr[i] = sc.nextInt();
         }
+        sc.close();
 
         double startTime = System.nanoTime();
         int min = findMin(arr);

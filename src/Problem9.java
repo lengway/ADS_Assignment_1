@@ -17,7 +17,7 @@ public class Problem9 {
     }
 
     /**
-     * This method finds a binomial coefficient using formula C(n, k) = C(n-1, k-1) + C(k, n-1).
+     * This method finds a binomial coefficient using formula C(n, k) = C(n-1, k-1) + C(n-1, k).
      * This is recursive function.
      * Time complexity: O(2^n), since it calls function twice with every single call.
      *
