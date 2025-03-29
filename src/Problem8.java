@@ -20,9 +20,12 @@ public class Problem8 {
 
     /**
      * This method checks string on containing symbols which are not digits.
+     * It uses function "String.matches()" and an expression "\\d" which means any number.
+     * "+" after it means check one or more time.
      * Time complexity: O(n), because it checks every char once.
      *
      * @param s String to check for digits.
+     * @return True or False, depends on contains given string other symbols or not.
      */
     public static boolean isOnlyDigits(String s) {
         return s.matches("\\d+");

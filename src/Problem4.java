@@ -19,13 +19,14 @@ public class Problem4 {
 
     /**
      * This method finds the factorial of the given number.
+     * This is recursive function.
      * Time complexity: O(n), since it calls itself once a call.
      *
      * @param number The input number.
      * @return The factorial of the number.
      */
     public static int factorial(int number) {
-        if (number == 1) {
+        if (number == 1 || number == 0) {
             return 1;
         }
 

@@ -26,6 +26,7 @@ public class Problem2 {
     /**
      * This method finds the average value in the given array.
      * Time complexity: O(n), since it iterates through all elements once.
+     * It summarizes all elements from array and divides it to length of the array.
      *
      * @param arr The input array.
      * @return The average value in the array.

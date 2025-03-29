@@ -23,6 +23,8 @@ public class Problem3 {
     /**
      * This method finds is given number prime.
      * Time complexity: O(n), since it iterates through all elements once.
+     * It finds the first divider of the given number.
+     * If divider found, function return false, else it returns true.
      *
      * @param number The input number.
      * @return The boolean answer.

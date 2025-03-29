@@ -21,7 +21,8 @@ public class Problem6 {
     }
 
     /**
-     * This method finds the given number in the given power using recursion.
+     * This method finds the given number in the given power.
+     * This is recursive function.
      * Time complexity: O(n), since it calls function once with every single call.
      *
      * @param a The input number which we should power.

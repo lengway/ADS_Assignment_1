@@ -17,7 +17,8 @@ public class Problem7 {
     }
 
     /**
-     * This method prints the given array in the reverse order using recursion.
+     * This method prints the given array in the reverse order.
+     * This is recursive function.
      * Time complexity: O(n), since it calls function once with every single call.
      *
      * @param n Amount of numbers to input.

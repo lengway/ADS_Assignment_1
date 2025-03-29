@@ -19,7 +19,8 @@ public class Problem10 {
     }
 
     /**
-     * This method finds a GCD of two entered numbers using recursion.
+     * This method finds a GCD of two entered numbers using Euclidean algorithm.
+     * This is recursive function.
      * Time complexity: O(n), since it calls function once with every single call.
      *
      * @param a The first number.
